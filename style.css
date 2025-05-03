@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* General styles */
+header {
+    background-color: #000000;
+    font-size: 30px;
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    width: 95%; 
+    position: relative;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    margin: 0 auto; 
+    padding: 10px 20px; 
+    transition: background-color 0.5s; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* 90% opacity for background */
+}
+
+.home-button {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'inter', sans-serif; /* Apply the imported font */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+
+footer {
+    background-color: #232323;
+    color: rgb(190, 190, 190);
+    padding-left: 10px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: relative;
+    height: 70px;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+img {
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    right: -480px;
+    top: 100px;
+    position: relative;
+    align-items: center;
+}
+
+h6 {
+    font-size: 10px;
+    margin-top: 20px;
+    right: -820px;
+    top: 90px;
+    position: relative;
+}
+
+h5{
+    font-size: 50px;
+    right: -880px;
+    top:-480px;
+    position: relative;
+}
+
+.textBox {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.textBox2 {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.textBox3 {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.textBox4 {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.textBox5 {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.textBox6 {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 10px; /* Adjust margin */
+}
+
+.no-bullets li {
+    margin-bottom: 5px; /* Add some space between list items */
+}
+
+.center-image {
+    display: block;
+    margin-left: -280px;
+    margin-right: 0px;
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.content {
+        background-color: #2b2b2b;
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'inter', sans-serif; /* Apply the imported font */
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+}
+
+.textBox7 {
+    background-color: None;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 60px;
+}
