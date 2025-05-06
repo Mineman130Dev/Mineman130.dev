@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Mineman130</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="home-button">Mineman130</a>
+        <div class="nav-buttons" id="nav-buttons">
+            <a href="/projects.html" class="nav-button">JoltNotes</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </header>
+    <main>
+        <h1 class="textBox6"><b>JoltNotes</b></h1>
+    </main>
+    <div class="toolbar">
+        <div class = "toolbar-buttons-left">
+            <button id="menu-button">&lt;</button>
+        </div>
+        <div class = "toolbar-buttons-right">
+            <button id="bold-button">B</button>
+            <button id="italic-button">I</button>
+            <button id="underline-button">U</button>
+        </div>
+    </div>
+    <textarea class="textbox" id="note-text"></textarea>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p><a href="support.html" style="color: white; text-decoration: none;">Support</a> | <b>&copy; 2025 Mineman130 - All Rights Reserved</b>
+        </footer>
+        <script>
+            // Get references to the elements
+            const noteText = document.getElementById('note-text');
+            const boldButton = document.getElementById('bold-button');
+            const italicButton = document.getElementById('italic-button');
+            const underlineButton = document.getElementById('underline-button');
+            const menuButton = document.getElementById('menu-button');
+            const navButtons = document.getElementById('nav-buttons');
+            const menuToggle = document.getElementById('menu-toggle');
+    
+    
+            // Function to save the note to local storage
+            function saveNote() {
+                const noteContent = noteText.value;
+                localStorage.setItem('joltNotesContent', noteContent);
+                console.log('Note saved!'); // For debugging
+            }
+    
+            // Function to load the note from local storage
+            function loadNote() {
+                const savedContent = localStorage.getItem('joltNotesContent');
+                if (savedContent) {
+                    noteText.value = savedContent;
+                    console.log('Note loaded!'); // For debugging
+                } else {
+                    console.log('No saved note found.');
+                }
+            }
+    
+            // Event listener for the bold button
+            boldButton.addEventListener('click', () => {
+                // In a real editor, you'd apply bold formatting here.  For this demo, we'll just log it.
+                console.log('Bold button clicked');
+                // document.execCommand('bold', false, null); //not recommended, very buggy
+                noteText.style.fontWeight = noteText.style.fontWeight === 'bold' ? 'normal' : 'bold';
+                saveNote();
+    
+            });
+    
+            // Event listener for the italic button
+            italicButton.addEventListener('click', () => {
+                console.log('Italic button clicked');
+                // document.execCommand('italic', false, null);
+                 noteText.style.fontStyle = noteText.style.fontStyle === 'italic' ? 'normal' : 'italic';
+                 saveNote();
+            });
+    
+            // Event listener for the underline button
+            underlineButton.addEventListener('click', () => {
+                console.log('Underline button clicked');
+                // document.execCommand('underline', false, null);
+                noteText.style.textDecoration = noteText.style.textDecoration === 'underline' ? 'none' : 'underline';
+                saveNote();
+            });
+    
+            // Event listener for the menu button
+            menuButton.addEventListener('click', () => {
+                console.log('Menu button clicked');
+                //show the menu
+                navButtons.style.display = navButtons.style.display === 'flex' ? 'none' : 'flex';
+            });
+    
+            menuToggle.addEventListener('click', () => {
+                navButtons.style.display = navButtons.style.display === 'flex' ? 'none' : 'flex';
+            });
+    
+            // Event listener for the textarea to save on input
+            noteText.addEventListener('input', () => {
+                saveNote();
+            });
+    
+            // Load the note when the page loads
+            loadNote();
+        </script>
+</body>
+</html>
