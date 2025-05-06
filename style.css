@@ -242,7 +242,15 @@ h5{
     font-size: 24px;
 }
 
+@media (max-width: 768px) {
+.nav-buttons {
+    display: none;
+}
 
+.menu-toggle {
+    display: block;
+}
+}
 
 .textBox7 {
     background-color: None;
