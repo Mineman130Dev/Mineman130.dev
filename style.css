@@ -33,15 +33,6 @@ header {
     margin-left: 20px;
 }
 
-.menu-toggle {
-    display: none; 
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
-
 header.scrolled {
     background-color: rgba(0, 0, 0, 0.9); /* 90% opacity for background */
 }
@@ -240,16 +231,6 @@ h5{
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
-}
-
-@media (max-width: 768px) {
-.nav-buttons {
-    display: none;
-}
-
-.menu-toggle {
-    display: block;
-}
 }
 
 .textBox7 {
