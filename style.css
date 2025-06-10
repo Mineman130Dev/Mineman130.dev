@@ -67,14 +67,28 @@ footer {
     margin-top: auto;
 }
 
-img {
-    width: 500px;
-    height: 450px;
+img { /* Targeting the image within the <main> tag */
+    max-width: 100%; /* Ensures the image never overflows its parent container */
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Removes extra space below the image, treating it as a block element */
+    margin-left: auto; /* Centers the image if it's smaller than the container */
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+.toolbar_radius {
+    max-width: 95%;
+    height: auto; 
+    display: block;
+    margin-right: auto;
     border-radius: 20px;
-    right: -480px;
-    top: 100px;
-    position: relative;
-    align-items: center;
+}
+
+.window_size_change {
+    width: 600px;
+    height: 500px;
+    margin-right: auto;
+    border-radius: 20px;
 }
 
 h6 {
@@ -82,13 +96,6 @@ h6 {
     margin-top: 20px;
     right: -820px;
     top: 90px;
-    position: relative;
-}
-
-h5{
-    font-size: 50px;
-    right: -880px;
-    top:-480px;
     position: relative;
 }
 
@@ -239,4 +246,65 @@ h5{
     border-radius: 10px;
     text-align: center;
     font-size: 60px;
+}
+
+
+
+/* General button styling */
+.button {
+    display: inline-block; /* Makes it act like a block but sit side-by-side */
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    min-width: 200px; /* Ensure buttons have a minimum width */
+}
+
+.button:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Primary button (e.g., for macOS) */
+.primary-button {
+    background-color: #007bff; /* A nice blue */
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Secondary button (e.g., for Windows) */
+.secondary-button {
+    background-color: #007bff; /* A nice blue */
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.secondary-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* For the container of buttons */
+.download-buttons {
+    display: flex; /* Arranges buttons in a row */
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line on smaller screens */
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Small text for notes */
+.small-text {
+    font-size: 0.9em;
+    color: #ccc; /* Lighter color */
+    text-align: center;
+    margin-top: 15px;
 }

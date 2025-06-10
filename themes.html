@@ -4,7 +4,7 @@
 <head>
     <title>Mineman130</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="icon_128x128@2x.png">
+    <link rel="icon" href="Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -17,46 +17,63 @@
     </header>
     <main>
     <h2 class="textBox6">The JoltNotes Themes</h2>
-    <h2 class="textBox4">The JoltNotes family has a few themes that you can choose from. You can change the theme by clicking the gear button in the top left corner.</h2>
-    <h2 class="textBox4">The themes are:</h2>
-    <h3 class="textBox4">JoltNotes - This is the default theme, it has a gray background and white text, and blue for the buttons.</h3>
-    <h3 class="textBox4">Dark - This is a dark theme, it has a dark gray background and white text, and blue for the buttons.</h3>
-    <h3 class="textBox4">Super Dark - This is a dark theme, it has a black background and white text, and white for the buttons.</h3>
-    <h3 class="textBox4">Arctic White - This is a white theme, it has a white background and black text, and blue for the buttons.</h3>
-    <h3 class="textBox4">Terminal Amber - This is a amber theme, it has a retro gray  background and amber text, and amber for the buttons.</h3>
-    <h3 class="textBox4">Terminal Green - This is a red theme, it has a retro gray background and green text, and green for the buttons.</h3>
-    <h3 class="textBox4">Pretty Pink - This is a pink theme, it has a pink background and black text, and white for the buttons.</h3>
+    <h2 class="textBox4">JoltNotes has a few themes that you can choose from. You can change the theme by clicking the gear button in the top left corner. This is a guide to change the themes to whatever you would like within JoltNotes.</h2>
     <br>
-    <h2 class="textBox6">Advanced Info:</h2>
-    <h3 class="textBox4">The themes are stored in the main file, JoltNotesLite.py. I use customtkinter for the UI, so every single theme looks like this:</h3>
+    <h2 class="textBox4">The themes are stored in the main file, <b>JoltNotes.py</b>. I use customtkinter for the UI, so every single theme looks like this:</h3>
     <h3 class="textBox4">def color_change_JoltNotes():<br>
-        toolbar.configure(fg_color='#262626')<br>
-        window.configure(fg_color='#171717')<br>
-        textbox.configure(fg_color='#171717', text_color='white')<br>
-        theme_label.configure(text_color='white')<br>
-        bold_button.configure(text_color='white')<br>
-        italic_button.configure(text_color='white')<br>
-        underline_button.configure(text_color='white')<br>
-        heading_button.configure(text_color='white')<br>
-        heading2_button.configure(text_color='white')<br>
-        heading3_button.configure(text_color='white')<br>
-        strickethrough_button.configure(text_color='white')<br>
-        menu_button.configure(text_color='white')<br>
-        settings_menu_button.configure(text_color='white')<br>
-        website_button.configure(text_color='white')<br>
-        save_theme("JoltNotes")</h3>
-    <h2 class="textBox4">If you would like to customize a theme to your likeing, follow this guide below:</h2>
-    <h3 class="textBox4">1. Open the JoltNotesLite.py file in a text editor.</h3>
-    <h3 class="textBox4">2. Find the theme you want to edit.</h3>
-    <h3 class="textBox4">3. Change the colors to your liking.</h3>
-    <h3 class="textBox4">4. Save the file.</h3>
-    <h3 class="textBox4">5. Open JoltNotesLite.app and the theme should be changed.</h3>
-    <h3 class="textBox4">This has not been tested, but in theory it should. If this method does not work I will update it at some point.</h3>
+    print("Applying JoltNotes theme...")<br>
+    toolbar.configure(fg_color='#262626')<br>
+    window.configure(fg_color='#171717')<br>
+    textbox.configure(fg_color='#171717', text_color='white')<br>
+    theme_label.configure(text_color='white')<br>
+    bold_button.configure(text_color='white')<br>
+    bold_button.configure(hover_color='#48b5ff')<br>
+    italic_button.configure(text_color='white')<br>
+    italic_button.configure(hover_color='#48b5ff')<br>
+    underline_button.configure(text_color='white')<br>
+    underline_button.configure(hover_color='#48b5ff')<br>
+    heading_button.configure(text_color='white')<br>
+    heading_button.configure(hover_color='#48b5ff')<br>
+    heading2_button.configure(text_color='white')<br>
+    heading2_button.configure(hover_color='#48b5ff')<br>
+    strickethrough_button.configure(text_color='white')<br>
+    strickethrough_button.configure(hover_color='#48b5ff')<br>
+    menu_button.configure(text_color='white')<br>
+    menu_button.configure(hover_color='#48b5ff')<br>
+    settings_menu_button.configure(text_color='white')<br>
+    settings_menu_button.configure(hover_color='#48b5ff')<br>
+    website_button.configure(text_color='white')<br>
+    settings_frame.configure(fg_color='#171717')<br>
+    notes_list_main_frame.configure(fg_color='#171717')<br>
+    center_button.configure(text_color='white', hover_color='#48b5ff')<br>
+    if mini_window != None:<br>
+        mini_window.configure(fg_color='#171717')<br>
+    if mini_textbox != None:<br>
+        mini_textbox.configure(text_color='white')<br>
+        mini_textbox.configure(fg_color='#171717')<br>
+    save_theme("JoltNotes")<br>
+    <h2 class="textBox4">You could change anything color wise, make sure you either know the name of the color or have the HEX(#FFFFF) code</h2>
+    <h2 class="textBox4">You could also change what default theme the app will use if no theme was saved with <b>DEFAULT_THEME = "JoltNotes"</b>. You could change the names that display for each theme as well by modifing:<br></h2>
+    <h3 class="textBox4"><b>theme_buttons = [<br>
+        ("JoltNotes", color_change_JoltNotes, 'white'),<br>
+        ("Silicon Chip", color_change_silicon, 'white'),<br>
+        ("Dark Mode", color_change_dark, 'white'),<br>
+        ("Light Mode", color_change_light, 'white'),<br>
+        ("Mutted Earth", color_change_earth, 'white'),<br>
+        ("Terminal Amber", color_change_orange, 'white'),<br>
+        ("Terminal Green", color_change_green, 'white'),<br>
+        ("Pretty Pink", color_change_pink, 'white'),<br>
+        ("Earthy Green", color_change_earthy, 'white'),<br>
+        ("Red Velvet", color_change_velvet, 'white'),<br>
+        ("Watermelon Vibes", color_change_menlon, 'white'),<br>
+    ]</b></h3>
+    <h2 class="textBox4">By doing everything in the guide, you basically made your own JoltNotes themes!</h2>
+    <h2 class="textBox4">This guide will be improved as I develop JoltNotes, so check back for updates or new features.</h2>
+    <br>
+    <br>
+    <br>
+    <br>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
     <footer>
         <p><a href="support.html" style="color: white; text-decoration: none;">Support</a> | <b>&copy; 2025 Mineman130 - All Rights Reserved</b>
         </footer>

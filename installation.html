@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Warning - Mineman130</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="home-button">Mineman130</a>
+        <div class="nav-buttons" id="nav-buttons">
+            <a href="/joltnotes.html" class="nav-button">JoltNotes</a>
+        </div>
+    </header>
+    <main>
+        <br>
+        <br>
+        <br>
+        <h1 class="textBox4">Installation guide for JoltNotes on macOS</h1>
+        <br>
+        <h2 class="textBox4">System Requirements</h2>
+        <h4 class="textBox4">macOS Intel-based: macOS Monterey or later</h4>
+        <h4 class="textBox4">macOS Silicon-based: Apple M1 Chip or later</h4>
+        <br>
+        <br>
+        <h1 class="textBox4">Resolving macOS Security Warnings</h1>
+        <h3 class="textBox4">When first launching JoltNotes, you may encounter a security warning stating "JoltNotes is damaged and can't be opened." This is due to macOS Gatekeeper security features.</h3>
+        <h4 class="textBox4"><u>Option 1: Using System Settings</u></h4>
+        <h5 class="textBox4">Try to open the app</h5>
+        <h5 class="textBox4">Go to System Settings > Privacy & Security</h5>
+        <h5 class="textBox4">Look for a message about JoltNotes and click "Open Anyway"</h5>
+        <h4 class="textBox4"><u>Option 2: Using Terminal</u></h4>
+        <h5 class="textBox4">If the "Open Anyway" button doesn't appear, you can use Terminal:</h5>
+        <h5 class="textBox4">Open Terminal (Applications > Utilities > Terminal)</h5> 
+        <h4 class="textBox4"><u>Navigate to where you installed the app:</u></h4>
+        <h5 class="textBox4">cd /Applications (If you installed elsewhere, adjust the path accordingly)</h5>
+        <h4 class="textBox4"><u>Run this command (you'll need to enter your password):</u></h4>
+        <h5 class="textBox4">sudo xattr -dr com.apple.quarantine JoltNotes.app</h5>
+        <h3 class="textBox4">Try opening JoltNotes again</h3>
+        <h3 class="textBox4">Note: Commands using sudo require administrator privileges. Only use Terminal commands if you understand their function. The developer will explore Apple's code signing and notarization process in future releases for a smoother experience.</h3>
+    </main>
+    <br>
+    <br>
+    <footer>
+        <p><a href="support.html" style="color: white; text-decoration: none;">Support</a> | <b>&copy; 2025 Mineman130 - All Rights Reserved</b>
+        </footer>
+</body>
+</html>
