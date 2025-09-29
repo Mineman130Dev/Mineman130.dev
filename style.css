@@ -2,23 +2,21 @@
 
 /* General styles */
 header {
-    background-color: #000000;
+    background-color: rgba(255, 255, 255, 0.3);
     font-size: 30px;
     color: white;
     border-radius: 20px;
     height: 50px;
     width: 95%; 
     position: relative;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    margin: 0 auto; 
-    padding: 10px 20px; 
+    left: 30px;
+    padding: 10px ; 
     transition: background-color 0.5s; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    top: 10px;
 }
 
 .nav-buttons {
@@ -44,7 +42,9 @@ header.scrolled {
 }
 
 body {
-    background-color: #000000;
+    background-image: linear-gradient(45deg, #87c8fd, #2789fa);
+    min-height: 100vh;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     color: white;
@@ -57,7 +57,6 @@ body {
 footer {
     background-color: #232323;
     color: rgb(190, 190, 190);
-    padding-left: 10px;
     left: 0;
     right: 0;
     position: relative;
@@ -99,11 +98,98 @@ h6 {
     position: relative;
 }
 
+.footersecond {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    width: 95%; 
+    position: relative;
+    left: 30px;
+    padding: 10px 20px; 
+    display: flex;
+    align-items: center;
+}
+
+.project-buttons-container {
+  display: flex; /* Makes the container a flexbox */
+  flex-wrap: wrap; /* Allows items to wrap to the next line if the container is too narrow */
+  justify-content: center; /* Optional: Aligns items horizontally in the center */
+  align-items: center; /* Optional: Aligns items vertically in the center */
+  gap: 20px; /* Optional: Adds space between the buttons */
+}
+
+.project-button {
+  background-color: white;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.project-button:hover {
+  border-color: #ffffff;
+  background-color: #2887ed;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
+
+.icon-container {
+  background-color: #474747;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+}
+
+.project-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-date {
+  font-size: 0.9em;
+  color: #ffffff;
+  margin: 5px 0 10px 0;
+  color: black;
+}
+
+.project-description {
+  font-size: 0.9em;
+  color: #ccc;
+  line-height: 1.4;
+  margin: 0;
+  color: white;
+}
+
 .textBox {
-    background-color: None;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
+    text-align: center;
+    width: 50px;
+    height: 100px;
 }
 
 .textBox2 {
@@ -114,7 +200,8 @@ h6 {
 }
 
 .textBox3 {
-    background-color: None;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
@@ -122,7 +209,8 @@ h6 {
 }
 
 .textBox4 {
-    background-color: None;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
@@ -130,18 +218,27 @@ h6 {
 }
 
 .textBox5 {
-    background-color: None;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.textBox6 {
+    color: white;
     padding: 10px;
     margin: 10px;
     text-align: center;
 }
 
-.textBox6 {
-    background-color: None;
+.textBoxDEVLOG {
+    color: white;
     padding: 10px;
     margin: 10px;
-    font-size: 50px;
-    text-align: center;
+    border-radius: 10px;
+    text-align: center;     
 }
 
 .no-bullets {
@@ -163,14 +260,14 @@ h6 {
 }
 
 .content {
-        background-color: #2b2b2b;
-        margin: 0;
-        padding: 0;
-        color: white;
-        font-family: 'inter', sans-serif; /* Apply the imported font */
-        display: flex;
-        flex-direction: column;
-        min-height: 200px;
+    background-color: #2789fa;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'inter', sans-serif; /* Apply the imported font */
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
 }
 
 .textbox {
@@ -248,8 +345,6 @@ h6 {
     font-size: 60px;
 }
 
-
-
 /* General button styling */
 .button {
     display: inline-block; /* Makes it act like a block but sit side-by-side */
@@ -269,26 +364,28 @@ h6 {
 
 /* Primary button (e.g., for macOS) */
 .primary-button {
-    background-color: #007bff; /* A nice blue */
-    color: white;
-    border: 2px solid #007bff;
+    background-color: #ffffff; /* A nice blue */
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
 }
 
 .primary-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #2887ed;
+    color: white;
+    border-color: #ffffff;
 }
 
 /* Secondary button (e.g., for Windows) */
 .secondary-button {
-    background-color: #007bff; /* A nice blue */
-    color: white;
-    border: 2px solid #007bff;
+    background-color: #ffffff; /* A nice blue */
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
 }
 
 .secondary-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #2887ed;
+    color: white;
+    border-color: #ffffff;
 }
 
 /* For the container of buttons */
@@ -304,7 +401,7 @@ h6 {
 /* Small text for notes */
 .small-text {
     font-size: 0.9em;
-    color: #ccc; /* Lighter color */
+    color: #ffffff; /* Lighter color */
     text-align: center;
     margin-top: 15px;
 }
