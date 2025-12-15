@@ -2,12 +2,12 @@
 
 /* General styles */
 header {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0);
     font-size: 30px;
     color: white;
     border-radius: 20px;
     height: 50px;
-    width: 95%; 
+    width: 9%; 
     position: relative;
     left: 30px;
     padding: 10px ; 
@@ -42,7 +42,7 @@ header.scrolled {
 }
 
 body {
-    background-image: linear-gradient(45deg, #87c8fd, #2789fa);
+    background-color: #313131;
     min-height: 100vh;
     background-repeat: no-repeat;
     margin: 0;
@@ -55,8 +55,8 @@ body {
 }
 
 footer {
-    background-color: #232323;
-    color: rgb(190, 190, 190);
+    background-color: #373737;
+    color: rgb(255, 255, 255);
     left: 0;
     right: 0;
     position: relative;
@@ -66,13 +66,9 @@ footer {
     margin-top: auto;
 }
 
-img { /* Targeting the image within the <main> tag */
-    max-width: 100%; /* Ensures the image never overflows its parent container */
-    height: auto;    /* Maintains the image's aspect ratio */
-    display: block;  /* Removes extra space below the image, treating it as a block element */
-    margin-left: auto; /* Centers the image if it's smaller than the container */
-    margin-right: auto;
-    border-radius: 50px;
+img { 
+    max-width: 100%; 
+    height: 200px;  
 }
 
 .toolbar_radius {
@@ -233,12 +229,9 @@ h6 {
     text-align: center;
 }
 
-.textBoxDEVLOG {
+.textBoxDownload {
     color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;     
+    text-align: center;  
 }
 
 .no-bullets {
@@ -375,6 +368,18 @@ h6 {
     border-color: #ffffff;
 }
 
+.primary-button2 {
+    background-color: #ffffff; /* A nice blue */
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+}
+
+.primary-button2:hover {
+    background-color: rgb(4, 210, 4);
+    color: white;
+    border-color: #ffffff;
+}
+
 /* Secondary button (e.g., for Windows) */
 .secondary-button {
     background-color: #ffffff; /* A nice blue */
@@ -404,4 +409,46 @@ h6 {
     color: #ffffff; /* Lighter color */
     text-align: center;
     margin-top: 15px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .projects-container {
+        /* 1. Change the display to stack items vertically */
+        flex-direction: column; 
+        
+        /* 2. Center items horizontally when they are stacked */
+        align-items: center;
+        
+        /* 3. Give them some vertical spacing */
+        gap: 30px; 
+    }
+}
+
+/* Base CSS for all screen sizes */
+.projects-container {
+    /* 1. Enable Flexbox */
+    display: flex; 
+    
+    /* 2. Distribute space evenly between items */
+    justify-content: space-around; 
+    
+    /* 3. Center the items vertically (if they had different heights) */
+    align-items: center; 
+    
+    /* 4. Set a max width so it doesn't stretch across massive screens */
+    max-width: 800px; 
+    
+    /* 5. Center the entire container on the page */
+    margin: 0 auto; 
+    
+    /* 6. Ensure the icons are only as wide as the content (from our previous conversation) */
+    text-align: center; 
+}
+
+/* Make sure the icons/links inside are display: inline-block or similar */
+.projects-container a {
+    display: inline-block; 
+    /* This allows space to be added around the icons */
+    padding: 10px; 
 }
